@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   newTask: ""
 },
 methods:{
+  saveNewTask: function(){
+    let taskObject = 
+  }
   taskDone: function(index){
     this.tasks[index].done = true;
   }
