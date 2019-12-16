@@ -2,12 +2,16 @@ import Vue from 'vue';
 
 document.addEventListener('DOMContentLoaded', () => {
   new Vue({
-  //we want to listen to everything thats inside
-  //the app div
+
   el: "#app",
   //properties
   data:{
-    items:[{name:"milk"}]
+    
+    tasks:[
+      {task:"Homework", priority:"High", done: false},
+      {task:"Aldi", priority:"High", done: true }
+  ]
+  // newTask: ""
   }
 });
 });

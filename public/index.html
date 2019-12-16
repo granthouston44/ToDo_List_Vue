@@ -2,13 +2,19 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <script src="js/bundle.js"></script>
-    <link rel="stylesheet" href="./public/css/style.css">
+    <script src="./js/bundle.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
     <title></title>
   </head>
   <body>
     <div id="app">
-        
+        <h1>Super Productive ToDo List!</h1>
+        <h4>ToDo's:</h4>
+          <ul>
+            <li v-for="(banana, index) in tasks">
+            <span>{{banana.task}}</span>
+            </li>
+          </ul>
     </div>
   </body>
 </html>
