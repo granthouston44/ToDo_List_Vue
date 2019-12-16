@@ -11,11 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
       {task:"Homework", priority:"High", done: false},
       {task:"Aldi", priority:"High", done: true }
   ],
-  newTask: ""
+  newTask: "",
+  newPriority: "",
 },
 methods:{
   saveNewTask: function(){
-    let taskObject = {task: this.newTask, done: false}
+    let taskObject = {task: this.newTask, priority: this.newPriority, done: false}
     this.tasks.push(taskObject);
     this.newTask = ""
   },

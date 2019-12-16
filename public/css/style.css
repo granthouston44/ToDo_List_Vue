@@ -34,8 +34,12 @@ li.task-done {
   color: #1a681e;
 }
 
-li.task-not-done {
+li.task-not-done, span.High {
   border: 2px solid #f2360c;
+}
+
+span.Low{
+  border: 2px solid orange;
 }
 
 input[type="text"] {

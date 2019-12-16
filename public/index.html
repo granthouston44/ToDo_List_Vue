@@ -13,6 +13,7 @@
           <ul>
             <li v-for="(banana, index) in tasks" v-bind:class="banana.done ? 'task-done' : 'task-not-done'">
             <span>{{banana.task}}</span>
+            <span v-if="!banana.done" v-bind:class=banana.priority>{{banana.priority}}</span>
             <span v-if="banana.done">Done</span>
             <button v-if="!banana.done" v-on:click="taskDone(index)">Done</button>
             </li>
@@ -20,6 +21,10 @@
           <form v-on:submit.prevent="saveNewTask">
             <label for="new-task">Add new task:</label>
             <input v-model="newTask" type="text" id="new-task"/>
+            <label for="new-priority">High Priority</label>
+            <input v-model="newPriority" name="priority" type="radio" id="priorityHigh" value="high">
+            <label for="new-priority">Low Priority</label>
+            <input v-model="newPriority" name="priority" type="radio" id="priorityLow" value="Low">
             <input type="submit" value="Save new task"/>
           </form>
     </div>
