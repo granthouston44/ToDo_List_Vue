@@ -11,8 +11,10 @@
         <h1>Super Productive ToDo List!</h1>
         <h4>ToDo's:</h4>
           <ul>
-            <li v-for="(banana, index) in tasks">
+            <li v-for="(banana, index) in tasks" v-bind:class="banana.done ? 'task-done' : 'task-not-done'">
             <span>{{banana.task}}</span>
+            <span v-if="banana.priority">Priority:</span>
+            <button v-if="!banana.priority" v-on:click="doneTask(index)">Done</button>
             </li>
           </ul>
     </div>
