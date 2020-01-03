@@ -34,7 +34,7 @@ li.task-done {
   color: #1a681e;
 }
 
-li.task-not-done, span.High {
+li.task-not-done, span.high, span.High {
   border: 2px solid #f2360c;
 }
 
